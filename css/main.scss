@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=PT+Serif+Caption&family=Raleway&display=swap");
+
+//variables
+$light: #e6e7e4;
+$pink: #ff9b93;
+$lightPink: #ffe0d8;
+$dark: #41584b;
+$darkText: #3d3d3d;
+
+//setup
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Martel";
+}
+
+h2 {
+  font-family: "Raleway";
+}
+
+p {
+  font-family: "PT Serif Caption";
+}
+
+a {
+  text-decoration: none;
+  color: $darkText;
+  font-family: "PT Serif Caption";
+}
+
+body {
+  background-color: $light;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 200vh;
+  pointer-events: none;
+  background-color: $pink;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+}
+.is-transitioning {
+  pointer-events: none;
+  cursor: progress;
+}
+
+//home
+//app
+.app {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 4fr;
+}
+
+//nav
+nav {
+  background-color: $pink;
+  color: $darkText;
+  border-right: 5px solid $darkText;
+  padding-top: 10rem;
+
+  h1 {
+    text-align: center;
+    font-size: 1.9rem;
+    letter-spacing: 0.5rem;
+    text-indent: 1rem;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-decoration-color: $pink;
+    padding-bottom: 1rem;
+  }
+
+  .icons {
+    padding-top: 19.5rem;
+    text-align: end;
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+    i {
+      padding: 0.5rem;
+      transition: 0.3s ease;
+      &:hover {
+        color: $light;
+        background-color: $darkText;
+      }
+    }
+  }
+
+  ul {
+    text-align: center;
+    list-style-type: none;
+    li {
+      padding-bottom: 1rem;
+      letter-spacing: 0.1rem;
+      text-indent: 0.1rem;
+      font-size: 1rem;
+      &:hover {
+        text-decoration: line-through;
+        text-decoration-color: $pink;
+      }
+    }
+  }
+}
+
+//hero
+.hero {
+  margin: auto;
+  color: $darkText;
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 2.5rem;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-decoration-color: $light;
+    text-indent: 2.5rem;
+    padding-bottom: 1rem;
+  }
+  p {
+    background-color: $darkText;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    text-indent: 0.3rem;
+    color: $light;
+    padding: 0.5rem;
+  }
+}
+
+//about
+
+//nav
+navbar {
+  margin: 2rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    color: $darkText;
+    text-align: center;
+    font-size: 1.9rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    text-decoration-color: $light;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      padding-left: 1.5rem;
+      letter-spacing: 0.1rem;
+      text-indent: 0.1rem;
+      font-size: 1rem;
+      &:hover {
+        text-decoration: line-through;
+        text-decoration-color: $pink;
+      }
+    }
+  }
+}
+
+//hero
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.image {
+  background-image: url(../images/cards.jpg);
+  background-size: auto;
+  padding: 150px;
+  h1 {
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: $pink;
+  }
+}
+
+.grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  color: $darkText;
+  .text {
+    grid-row: 1 / span 2;
+    background-color: #fff;
+    padding: 3rem;
+    h1 {
+      padding-bottom: 0.5rem;
+      text-decoration: underline;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .contributing {
+    background-image: url(../images/productivity.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    h2 {
+      padding: 0.4rem;
+      background-color: $pink;
+    }
+  }
+
+  .beba {
+    background-image: url(../images/process.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    h2 {
+      padding: 0.4rem;
+      background-color: $pink;
+    }
+  }
+}
+
+//location
+.location {
+  margin: 1.5rem 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $darkText;
+  grid-gap: 20px;
+  .based {
+    background-color: #fff;
+    padding: 3rem 3rem 2rem;
+    h1 {
+      padding-bottom: 0.5rem;
+      text-decoration: underline;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: justify;
+      padding-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      padding-bottom: 0.5rem;
+      font-weight: 400;
+      text-decoration: underline;
+    }
+
+    .connect {
+      padding-top: 2rem;
+    }
+
+    i {
+      font-size: 1rem;
+      color: white;
+      padding: 10px;
+    }
+    .ico {
+      display: inline-block;
+      border-radius: 50px;
+      background-color: $darkText;
+      transition: all 0.5s ease;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .picture {
+    background-image: url("../images/office.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+footer {
+  text-align: center;
+  color: $darkText;
+  margin-bottom: 1rem;
+}
+
+//our work
+.work {
+  margin: 5rem 0 3rem;
+  h1 {
+    font-size: 2rem;
+    color: $darkText;
+    text-decoration: underline;
+  }
+  ul {
+    margin: auto;
+    max-width: 1200px;
+    padding: 1rem;
+    background-color: $pink;
+    margin-top: 2.5rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    list-style-type: none;
+    li {
+      width: 15rem;
+      height: 15rem;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+//contact us
+
+.formica {
+  min-height: 80vh;
+  display: flex;
+  background-color: $pink;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $darkText;
+    text-decoration: underline;
+  }
+
+  form {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: $light;
+
+    input {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      padding: 0.3rem;
+    }
+
+    textarea {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      padding: 0.3rem;
+    }
+
+    button {
+      border-color: transparent;
+      background-color: $lightPink;
+      padding: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: $darkText;
+        color: $light;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+
+  .app {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  nav {
+    display: initial;
+  }
+}
+
+@media (min-width: 0) and (max-width: 990px) {
+  navbar {
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      text-align: center;
+      text-indent: 0px;
+      letter-spacing: 0px;
+    }
+
+    ul {
+      flex-direction: column;
+      li {
+        text-align: center;
+      }
+    }
+  }
+
+  navbar ul li {
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .location {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .location .picture {
+    width: 400px;
+    height: 400px;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav {
+    transform: translateX(-900px);
+    padding-top: 6.6rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    transition: all 0.7s ease;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 10px;
+    z-index: 2;
+    top: 10px;
+    display: block;
+  }
+
+  .app {
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .hero {
+    p {
+      font-size: 0.5rem;
+      width: 50%;
+      text-align: center;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      text-indent: 0px;
+      letter-spacing: 0px;
+    }
+  }
+}

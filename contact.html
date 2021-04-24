@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Vlajna | About</title>
+</head>
+<body data-barba="wrapper">
+
+    <div class="loader"></div>
+    <div class="container" data-barba="container" data-barba-namespace="our-work">
+      <navbar>
+        <div class="logo">
+          <h1>Vlajna</h1>
+        </div>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/our-work.html">Our work</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+      </navbar>
+
+      <div class="formica">
+        <h1>Contact Us</h1>
+        <form
+            action="https://formspree.io/f/mayannng"
+            method="POST"
+            >
+
+                <input type="email" name="_replyto" placeholder="E-mail..." autocomplete="off">
+                <textarea name="message" placeholder="Message..." cols="20" autocomplete="off"></textarea>
+
+            <button type="submit">Send</button>
+            </form>
+      </div>
+      
+    </div>
+</body>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="./js/main.js"></script>
+</html>

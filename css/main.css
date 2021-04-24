@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=PT+Serif+Caption&family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Martel";
+}
+
+h2 {
+  font-family: "Raleway";
+}
+
+p {
+  font-family: "PT Serif Caption";
+}
+
+a {
+  text-decoration: none;
+  color: #3d3d3d;
+  font-family: "PT Serif Caption";
+}
+
+body {
+  background-color: #e6e7e4;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 200vh;
+  pointer-events: none;
+  background-color: #ff9b93;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-transitioning {
+  pointer-events: none;
+  cursor: progress;
+}
+
+.app {
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+nav {
+  background-color: #ff9b93;
+  color: #3d3d3d;
+  border-right: 5px solid #3d3d3d;
+  padding-top: 10rem;
+}
+
+nav h1 {
+  text-align: center;
+  font-size: 1.9rem;
+  letter-spacing: 0.5rem;
+  text-indent: 1rem;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #ff9b93;
+          text-decoration-color: #ff9b93;
+  padding-bottom: 1rem;
+}
+
+nav .icons {
+  padding-top: 19.5rem;
+  text-align: end;
+  padding-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+nav .icons i {
+  padding: 0.5rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+nav .icons i:hover {
+  color: #e6e7e4;
+  background-color: #3d3d3d;
+}
+
+nav ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  text-indent: 0.1rem;
+  font-size: 1rem;
+}
+
+nav ul li:hover {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #ff9b93;
+          text-decoration-color: #ff9b93;
+}
+
+.hero {
+  margin: auto;
+  color: #3d3d3d;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #e6e7e4;
+          text-decoration-color: #e6e7e4;
+  text-indent: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.hero p {
+  background-color: #3d3d3d;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  text-indent: 0.3rem;
+  color: #e6e7e4;
+  padding: 0.5rem;
+}
+
+navbar {
+  margin: 2rem 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+navbar h1 {
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 1.9rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #e6e7e4;
+          text-decoration-color: #e6e7e4;
+}
+
+navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+navbar ul li {
+  padding-left: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-indent: 0.1rem;
+  font-size: 1rem;
+}
+
+navbar ul li:hover {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #ff9b93;
+          text-decoration-color: #ff9b93;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.image {
+  background-image: url(../images/cards.jpg);
+  background-size: auto;
+  padding: 150px;
+}
+
+.image h1 {
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #ff9b93;
+}
+
+.grid {
+  margin-top: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 1fr;
+      grid-template-columns: 5fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  color: #3d3d3d;
+}
+
+.grid .text {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.grid .text h1 {
+  padding-bottom: 0.5rem;
+  text-decoration: underline;
+  font-size: 2.5rem;
+}
+
+.grid .text p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.grid h2 {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.grid .contributing {
+  background-image: url(../images/productivity.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.grid .contributing h2 {
+  padding: 0.4rem;
+  background-color: #ff9b93;
+}
+
+.grid .beba {
+  background-image: url(../images/process.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.grid .beba h2 {
+  padding: 0.4rem;
+  background-color: #ff9b93;
+}
+
+.location {
+  margin: 1.5rem 0 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  color: #3d3d3d;
+  grid-gap: 20px;
+}
+
+.location .based {
+  background-color: #fff;
+  padding: 3rem 3rem 2rem;
+}
+
+.location .based h1 {
+  padding-bottom: 0.5rem;
+  text-decoration: underline;
+  font-size: 2.5rem;
+}
+
+.location .based p {
+  font-size: 1rem;
+  text-align: justify;
+  padding-bottom: 2rem;
+}
+
+.location .based h2 {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.location .based .connect {
+  padding-top: 2rem;
+}
+
+.location .based i {
+  font-size: 1rem;
+  color: white;
+  padding: 10px;
+}
+
+.location .based .ico {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: #3d3d3d;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.location .based .ico:hover {
+  opacity: 0.5;
+}
+
+.location .picture {
+  background-image: url("../images/office.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  text-align: center;
+  color: #3d3d3d;
+  margin-bottom: 1rem;
+}
+
+.work {
+  margin: 5rem 0 3rem;
+}
+
+.work h1 {
+  font-size: 2rem;
+  color: #3d3d3d;
+  text-decoration: underline;
+}
+
+.work ul {
+  margin: auto;
+  max-width: 1200px;
+  padding: 1rem;
+  background-color: #ff9b93;
+  margin-top: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  list-style-type: none;
+}
+
+.work ul li {
+  width: 15rem;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.formica {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ff9b93;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formica h1 {
+  color: #3d3d3d;
+  text-decoration: underline;
+}
+
+.formica form {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #e6e7e4;
+}
+
+.formica form input {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.formica form textarea {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.formica form button {
+  border-color: transparent;
+  background-color: #ffe0d8;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.formica form button:hover {
+  background-color: #3d3d3d;
+  color: #e6e7e4;
+}
+
+@media only screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+  .app {
+    -ms-grid-columns: 1fr 4fr;
+        grid-template-columns: 1fr 4fr;
+  }
+  nav {
+    display: initial;
+  }
+}
+
+@media (min-width: 0) and (max-width: 990px) {
+  navbar {
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  navbar h1 {
+    text-align: center;
+    text-indent: 0px;
+    letter-spacing: 0px;
+  }
+  navbar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  navbar ul li {
+    text-align: center;
+  }
+  navbar ul li {
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  .image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .work ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .location .picture {
+    width: 400px;
+    height: 400px;
+  }
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav {
+    -webkit-transform: translateX(-900px);
+            transform: translateX(-900px);
+    padding-top: 6.6rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+  }
+  .hamburger {
+    position: absolute;
+    right: 10px;
+    z-index: 2;
+    top: 10px;
+    display: block;
+  }
+  .app {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+  .hero p {
+    font-size: 0.5rem;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  .hero h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-indent: 0px;
+    letter-spacing: 0px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
